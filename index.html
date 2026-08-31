@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <h1>Todo List</h1>
+      <div class="controls">
+        <button id="theme-toggle" aria-label="Toggle dark light mode">🌙</button>
+      </div>
+    </header>
+
+    <section class="todo-creator">
+      <form id="todo-form" aria-label="Add a new task">
+        <input id="todo-input" name="todo" type="text" placeholder="What needs to be done?" aria-label="Task description">
+        <button id="add-btn" type="submit">Add</button>
+      </form>
+      <div id="feedback" role="status" aria-live="polite" class="feedback hidden"></div>
+    </section>
+
+    <section class="todo-list-section">
+      <div class="filters">
+        <div class="filter-buttons" role="tablist" aria-label="Task filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="list-actions">
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <div class="todo-footer">
+        <span id="items-left">0 items left</span>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>Built with HTML, CSS & JavaScript • No backend • LocalStorage</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
